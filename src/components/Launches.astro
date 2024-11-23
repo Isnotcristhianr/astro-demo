@@ -1,5 +1,5 @@
 ---
-import { optional } from "astro:schema";
+import type { APISpaceXresponse } from "../types/api";
 
 const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
   method: "POST",
@@ -16,9 +16,9 @@ const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
     },
   }),
 })
-const data = (await res.json())
+const { docs } = (await res.json()) as APISpaceXresponse
 
-console.log(data);
+console.log(docs);
 ---
 
 <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
