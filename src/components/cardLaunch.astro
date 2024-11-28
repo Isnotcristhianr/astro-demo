@@ -7,7 +7,7 @@ interface Props {
   flight_number: number;
   details: string;
 }
-const { success, flight_number, details, name, id, img } = Astro.props as Props;
+const { success, flight_number, name, id, img } = Astro.props as Props;
 const successText = success ? "Success" : "Failed";
 
 ---

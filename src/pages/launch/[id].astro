@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getLaunchById, getLaunches } from "../../services/spacex";
+import { getLaunches } from "../../services/spacex";
 
 export async function getStaticPaths() {
   const launches = await getLaunches();
