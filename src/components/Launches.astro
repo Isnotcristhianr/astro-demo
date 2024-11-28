@@ -1,7 +1,7 @@
 ---
 import CardLaunch from "./cardLaunch.astro";
 import { getLaunches } from "../services/spacex";
-
+export const prerender = true;
 const launches = await getLaunches();
 
 //console.log(launches);
