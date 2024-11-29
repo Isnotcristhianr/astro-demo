@@ -5,12 +5,16 @@ import tailwind from '@astrojs/tailwind';
 
 import preact from "@astrojs/preact";
 
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact()],
-  output: 'server',
-  adapter: vercel(),
+  output: 'static',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true
+    }
+  }),
   srcDir: "./src",
 });
