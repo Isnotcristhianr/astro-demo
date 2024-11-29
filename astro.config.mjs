@@ -10,7 +10,7 @@ import vercel from '@astrojs/vercel/serverless';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact()],
-  output: 'static',
+  output: 'server',
   adapter: vercel(),
   srcDir: "./src",
 });
