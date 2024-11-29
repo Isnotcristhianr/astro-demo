@@ -7,12 +7,10 @@ import preact from "@astrojs/preact";
 
 import vercel from '@astrojs/vercel/serverless';
 
-
-
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact()],
-  output: "hybrid",
+  output: 'static',
   adapter: vercel(),
   srcDir: "./src",
 });
